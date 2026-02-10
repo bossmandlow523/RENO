@@ -1,265 +1,353 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>High-Contrast Industrial Catalog - Renovo Resource Solutions</title>
+<title>Restricted Materials Compliance | industrial Premium</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&amp;family=Outfit:wght@900&amp;family=Syncopate:wght@700&amp;family=Inter:wght@700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script>
+<script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#fbbf24","industrial-black": "#0f0f0f",
-                        "industrial-gray": "#1a1a1a",
-                        "industrial-border": "#333333",
-                        "accent": "#f97316",},
+                        "industrial-black": "#050505",
+                        "accent-light": "#FFCC80",
+                        "accent-base": "#FF9933",
+                        "accent-dark": "#FF7F00",
+                        "accent-300": "#FFB74D"
+                    },
                     fontFamily: {
-                        "display": ["Barlow Condensed", "sans-serif"],
-                        "mono": ["Roboto Mono", "monospace"]
+                        "chonburi": ["Chonburi", "serif"],
+                        "outfit": ["Outfit", "sans-serif"],
+                        "syncopate": ["Syncopate", "sans-serif"],
+                        "inter": ["Inter", "sans-serif"]
                     },
                 },
             },
         }
     </script>
 <style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply bg-industrial-black text-gray-100 font-display;
-                background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0);
-                background-size: 32px 32px;
+        @layer utilities {
+            .skew-minus-2 { transform: skewY(-2deg); }
+            .skew-minus-12 { transform: skewX(-12deg); }
+            .metallic-border {
+                border: 1px solid transparent;
+                background: linear-gradient(#111, #111) padding-box,
+                            linear-gradient(135deg, #444 0%, #888 50%, #444 100%) border-box;
+            }
+            .gradient-bar {
+                background: linear-gradient(to right, #FFCC80, #FF9933, #FF7F00);
             }
         }
-        .industrial-texture {
-            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
-                              linear-gradient(225deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
-                              linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
-                              linear-gradient(315deg, rgba(255,255,255,0.05) 25%, transparent 25%);
-            background-position: 10px 0, 10px 0, 0 0, 0 0;
-            background-size: 20px 20px;
-            background-repeat: repeat;
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
         }
-        .metallic-border {
-            border: 1px solid transparent;
-            background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                        linear-gradient(135deg, #444, #888, #444) border-box;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48;
         }
-        .desaturated-img {
-            filter: grayscale(0.4) contrast(1.1);
+        .card-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col uppercase tracking-wider">
-<div class="w-full bg-accent py-2 px-4 border-b-2 border-industrial-black shadow-lg z-[60]">
-<div class="flex items-center justify-center gap-3 text-industrial-black text-sm font-extrabold italic">
-<span class="material-symbols-outlined font-bold">warning</span>
-<span>TIP: SEPARATE MATERIALS BY TYPE TO MAXIMIZE PROFITS. CLEAN METALS EARN MORE!</span>
-<span class="material-symbols-outlined font-bold">warning</span>
+<body class="antialiased">
+<div class="h-1.5 gradient-bar w-full"></div>
+<header class="max-w-[1600px] mx-auto px-8 pt-12 pb-6 flex justify-between items-end border-b border-white/10">
+<div>
+<h1 class="font-chonburi text-8xl leading-none uppercase tracking-tighter text-white">
+            RESTRICTED<br/>MATERIALS
+        </h1>
 </div>
-</div>
-<header class="flex items-center justify-between border-b-4 border-industrial-border bg-industrial-black px-6 md:px-10 py-4 sticky top-0 z-50">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-4 text-white">
-<div class="size-10 text-primary">
-<svg class="h-full w-full" fill="currentColor" viewBox="0 0 48 48">
-<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
-</svg>
-</div>
-<h2 class="text-2xl font-black italic tracking-tighter leading-none">RENOVO RESOURCE<br/><span class="text-primary">SOLUTIONS</span></h2>
-</div>
-<div class="hidden xl:flex items-center gap-6 font-semibold">
-<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">HOME</a>
-<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">PRICING</a>
-<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">LOCATIONS</a>
-<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">CONTACT</a>
-</div>
-</div>
-<div class="flex flex-1 justify-end gap-6">
-<label class="hidden md:flex flex-col min-w-40 !h-11 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-sm h-full ring-2 ring-industrial-border overflow-hidden bg-industrial-gray">
-<div class="text-primary flex items-center justify-center pl-4">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent text-white focus:ring-0 placeholder:text-gray-600 px-4 text-base font-bold uppercase" placeholder="SEARCH CATALOG" value=""/>
-</div>
-</label>
-<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-sm h-11 px-6 bg-primary hover:bg-white transition-all text-industrial-black text-lg font-black italic">
-<span class="truncate">GET QUOTE</span>
-</button>
+<div class="text-right pb-2">
+<p class="font-syncopate font-bold text-xs tracking-[0.15em] text-accent-300 mb-2">SCRAP RECYCLING OPERATIONS</p>
+<p class="font-outfit text-white text-xl">STATUTE 538.26 COMPLIANCE</p>
 </div>
 </header>
-<main class="flex-grow w-full max-w-[1600px] mx-auto px-6 py-12">
-<div class="flex flex-col gap-2 mb-12 border-l-8 border-primary pl-6">
-<h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter leading-none uppercase">Accepted Scrap</h1>
-<p class="text-primary font-mono text-lg font-bold max-w-2xl">
-            [ INDUSTRIAL GRADE CATALOG // IDENTIFY MATERIALS BELOW ]
-        </p>
-</div>
-<div class="mb-12 overflow-x-auto pb-4 scrollbar-hide">
-<div class="flex gap-2 min-w-max">
-<button class="px-8 py-3 bg-primary text-industrial-black font-black text-lg skew-x-[-12deg] transition-all hover:scale-105">
-<span class="inline-block skew-x-[12deg]">ALL_MATERIALS</span>
-</button>
-<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
-<span class="inline-block skew-x-[12deg]">ALUMINUM</span>
-</button>
-<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
-<span class="inline-block skew-x-[12deg]">COPPER</span>
-</button>
-<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
-<span class="inline-block skew-x-[12deg]">RADIATORS</span>
-</button>
-<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
-<span class="inline-block skew-x-[12deg]">STAINLESS_STEEL</span>
-</button>
-<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
-<span class="inline-block skew-x-[12deg]">OTHER</span>
-</button>
+<div class="relative w-full py-24 overflow-hidden">
+<div class="bg-accent-300 w-[120%] -ml-[10%] py-4 skew-minus-2 flex items-center justify-center">
+<div class="skew-y-[2deg] flex items-center gap-12">
+<span class="font-syncopate font-bold text-black uppercase tracking-[0.15em] text-lg">MANDATORY COMPLIANCE</span>
+<span class="font-syncopate font-bold text-black uppercase tracking-[0.15em] text-lg">●</span>
+<span class="font-syncopate font-bold text-black uppercase tracking-[0.15em] text-lg">PROVISION OF OWNERSHIP REQUIRED</span>
+<span class="font-syncopate font-bold text-black uppercase tracking-[0.15em] text-lg">●</span>
+<span class="font-syncopate font-bold text-black uppercase tracking-[0.15em] text-lg">GOVERNMENT ID MANDATORY</span>
 </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Bare bright copper" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZsUeh-vSixRcV3bmKULGkr_pNoIx7cYvcA8Vkl01PRqtSrlaJiGBBMkQTQmE4UeNKpfeL3NzV2_HpmpMMyh8VAQXzAR-LDuIyCVN_B9TUNF3eL4pF_UB4OuCgq1Z2yfq_T-ZXi7ov2LNF9kiBSaGc7MVB3jj4EIPcy2Z5xxLQz9kMWW7unOkkl3jLM7L_ABbUlYy6fkVq_oDWAaN6OhfbELfi31ESdXhpolPcwY6xNkOZcmqP8s2rlC2RSgsWhQ8zYajyoGZqdI"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">BARE BRIGHT COPPER</h3>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">BARE BRIGHT COPPER</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">MOST VALUABLE GRADE. CLEAN, UNCOATED WIRE ONLY.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: CP-01</div>
+<main class="max-w-[1600px] mx-auto px-8 py-24">
+<section class="mb-32">
+<div class="flex items-center gap-6 mb-12">
+<div class="h-px flex-1 bg-white/10"></div>
+<h2 class="font-outfit font-black text-2xl uppercase tracking-widest text-white">Documentation Protocol</h2>
+<div class="h-px flex-1 bg-white/10"></div>
 </div>
+<div class="grid grid-cols-3 gap-8">
+<div class="p-12 metallic-border bg-neutral-900/50">
+<span class="material-symbols-outlined text-5xl text-accent-300 mb-6">badge</span>
+<h3 class="font-outfit font-black text-xl uppercase mb-4">U.S. Government ID</h3>
+<p class="font-bold text-neutral-400">Valid State-issued ID, Driver's License, or Passport required for every transaction. Digital copies not accepted.</p>
 </div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Copper tubing" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEgLmQdhq9bbn8Gn-bBVv9rL1q3SP4PhUf_wvyu3ZfBC4_Y1EoA1VGcUWq9hKb1BLX1lQz-Qm5lo4as0V4pdInwC-OILCXJjQu8pkvs9HGKO_GCxtmHtcNSS53KWYga43AF2ZHcnjJNSO4P3UqrpbySsMMy6_Bc_09b1eXX1Nqum1OTx3gDFg55-2zXATWG2B62fZhCBFspVqGwd9T5RI4PC4ZyutuFkeQuvYNWhgmFB2mFMtTgVl3Tr9864J-Vn1Q9Iui1CINRJs"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">#1 COPPER TUBING</h3>
+<div class="p-12 metallic-border bg-neutral-900/50">
+<span class="material-symbols-outlined text-5xl text-accent-300 mb-6">description</span>
+<h3 class="font-outfit font-black text-xl uppercase mb-4">Proof of Ownership</h3>
+<p class="font-bold text-neutral-400">Bills of sale, corporate manifests, or decommissioning certificates must accompany all restricted categories.</p>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">#1 COPPER TUBING</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">CLEAN TUBING. NO PAINT, SOLDER, OR CORROSION.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: CP-02</div>
+<div class="p-12 metallic-border bg-neutral-900/50">
+<span class="material-symbols-outlined text-5xl text-accent-300 mb-6">corporate_fare</span>
+<h3 class="font-outfit font-black text-xl uppercase mb-4">Letter of Auth</h3>
+<p class="font-bold text-neutral-400">Commercial accounts must provide signed authorization on company letterhead for employee representatives.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Extruded aluminum" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8WKevwNeNsVsvA1tfYW68zhmLcdubYcECwefnFtkhaw84UCCJwV8MegQ8hUaFB_Cx1SqKFshQ_s_dHtjRUkAI1-6C0OzDzqF5alEMHYrA0eDEJ56VhSEXmV8jFwf7i4e6hekesa2PAM6zrpuoJwAY9FWKonz_QTu32yxRjiwJ0W-5UdnWR9AYxtPEa_twgj6vPHHeEFn0YYVwuxVgFgOIr56Gme-ZNETi0bEhC7f85RP0hPbSKCKGbN14PMMjcfsbygj16k5sQiA"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">EXTRUDED ALUMINUM</h3>
+</section>
+<nav class="flex flex-wrap gap-4 mb-16">
+<button class="skew-minus-12 bg-accent-300 text-black px-8 py-3 font-outfit font-black uppercase tracking-wider hover:scale-105 transition-transform origin-bottom">ALL MATERIALS</button>
+<button class="skew-minus-12 border border-white/20 text-white px-8 py-3 font-outfit font-black uppercase tracking-wider hover:scale-105 transition-transform hover:border-accent-300">MUNICIPAL</button>
+<button class="skew-minus-12 border border-white/20 text-white px-8 py-3 font-outfit font-black uppercase tracking-wider hover:scale-105 transition-transform hover:border-accent-300">INDUSTRIAL</button>
+<button class="skew-minus-12 border border-white/20 text-white px-8 py-3 font-outfit font-black uppercase tracking-wider hover:scale-105 transition-transform hover:border-accent-300">UTILITY</button>
+<button class="skew-minus-12 border border-white/20 text-white px-8 py-3 font-outfit font-black uppercase tracking-wider hover:scale-105 transition-transform hover:border-accent-300">AUTOMOTIVE</button>
+</nav>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">radio_button_checked</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-001</span>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">EXTRUDED ALUMINUM</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">UNPAINTED WINDOW FRAMES AND STRUCTURAL PROFILES.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: AL-44</div>
-</div>
-</div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Yellow brass" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1NRBvdV_j0HHqUTLK0iQCCfMjxFB6PaIhRenIwFiDbCrjodG0532cBuMfK47yy2OxanY5-PJCJ8a2plSBmI-GpEtfNX_C1SNglxRbmqjew491Ico4-5NjclyoQpDTJG5T2oA9Q9ttuI880EkSNEXKsvm1GuXBBK5jvR1cOfAwQSUosG0J6e8BtzsgfDwl1bAXT4DA_i_4Lln4J1BfGPnKdeo8DvBD_48fMwqjz0YIP86ET_zFCQyqOBsrXrejXJqeQ6Y9gay3-80"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">YELLOW BRASS</h3>
-</div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">YELLOW BRASS</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">FAUCETS, PLUMBING FIXTURES, AND INDUSTRIAL FITTINGS.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: BR-12</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Manhole Covers</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Requires official municipal release or utility authorization.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="304 Stainless" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD__Ce9bQsXYlWcs7oesVhzlDl7J-YvYcsxb6QkipgLVQgmvh05SHuEYQujyjvj4nLVa9WMfYVLg7raDZbfbg9p8NZrRKDjvLlKc-81p67ZWUJNcDmLoCG7SkTj-mcDeCDzHA0ymM3hiO524MzQ-X8eGHlqrGYb4JQo9URVk3zzLY5hvzkJSKYaIHLV9P_0oByji-hx9qxxL0xJQOyrWlLDw_PE91Mz32Y26G3Dm-hmL9HWhFy2OiRPFiLzT41DA1mGFOpG6Si08Ns"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">304 STAINLESS STEEL</h3>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">settings_input_component</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-002</span>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">304 STAINLESS STEEL</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">NON-MAGNETIC STEEL. SINKS AND KITCHEN EQUIPMENT.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: SS-09</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Catalytic Units</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">VIN verification and ownership documents required for all units.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Auto Radiators" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOOohiF45Ozv51EKk1J3VnMqm5ADMTDuahZ5AndF_aHCWod7gZ6CZipSWDva6S8FP_LwLtyjPBFW4PEAquvSy1rqO-v0sfQt0CIX6V-A6oJi0LLeQ68i9v0QC4e0xyIQNb0FkJn7MgRSIh_wPV5AnaS2T18EX6pM5NJ4cUnjpzM64kurNL8D8AMuqF_A5CD2APQyMDO26TbJbABV_96mfabnmI1uyH0YzfiC2hNtsd_xqb7NRClucTB9mu7YCEBH4-fhuagJcEdYw"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">AUTO RADIATORS</h3>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">bolt</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-003</span>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">AUTO RADIATORS</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">CLEAN COPPER/BRASS AUTOMOTIVE RADIATOR UNITS.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: RD-55</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Copper Utility</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Burnt or insulated copper wire requires utility license.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Insulated Wire" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOVVLfkLor_lQDhI2HfPcRol0TJSEZ6Zj1r0elCRxpBaxy2qDdGYV_aQrqwyKcBFUI2uiKQBkHRIW-ZQzS1IX9SyxDyQ-48fmP0F-p21o_aEYPZGRvaErBHtwiqealLlQHQ4wIVWas9eQBPgt7uJ5VPjbM-JEHcJuhzOhOQHuQeEqeENGdXvhdW2U0azs4OA2Is7lZuFo3MTBAMtDR8Xag8Jgglai3JW0ZvXe811CbdTescUPLGJro6TF7hF8oOp0bxTpMhTTeux0"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">INSULATED WIRE #1</h3>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">grid_view</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-004</span>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">INSULATED WIRE #1</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">HIGH RECOVERY COPPER WIRE. THHN OR ROMEX.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: WR-01</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Storm Grates</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Restricted to public works or authorized contractors only.</p>
 </div>
 </div>
-<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
-<img alt="Electric Motors" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC72blJHkkTCQozcMxmR6KD1cFHS5IR7vqjH2cu_DxtSV8_AEXiOMW-0yDWQXJZ1RU3ojHQJzjIZfrT6L1xaf7ufaED6-HWAF1WBeOnUu7EfPEzSfrTaIdNfFPngan7Pug0MyJZGquFv0If_lRPx1yRPl5EPekIpKEgW8O5aibkNL4Zdy2q5CoeY0BVftENfWSgux-ip8xGeY7-RegzXkWaKeSJ1xiTpcNIfsyzcbUmH87N8WxJ6rfhqYlvrdPCJxCsjZxTzOAlm4"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
-<h3 class="text-2xl font-black text-white">ELECTRIC MOTORS</h3>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">warning</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-005</span>
 </div>
-<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="industrial-texture absolute inset-0 opacity-20"></div>
-<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">ELECTRIC MOTORS</h3>
-<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
-<p class="text-industrial-black text-xl font-bold text-center leading-tight">WINDINGS FROM APPLIANCES OR HEAVY MACHINERY.</p>
-<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: MT-10</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Traffic Signs</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">DOT aluminum signage requires decommissioning records.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">history</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-006</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Cemetery Markers</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Strictly prohibited from public sale. Bronze/Brass plaques.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">liquor</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-007</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Beer Kegs</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Stainless steel kegs require specific brewery authorization.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">ac_unit</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-008</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">HVAC Coils</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Must provide HVAC technician license or manifest.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">reorder</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-009</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Guard Rails</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Roadway barriers must have highway maintenance ID.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">train</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-010</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Rail Equipment</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Spikes, rails, and wheels restricted to railroad companies.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">light</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-011</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Lamp Posts</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Industrial/City light poles require utility clearance.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">electric_bolt</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-012</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Transformers</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">PCB-free certification and industrial bill of sale required.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">tire_repair</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-013</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Vehicle Rims</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Clean aluminum rims only. No tires attached for processing.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">propane_tank</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-014</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Gas Cylinders</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Must be cut in half with valves completely removed.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">water_damage</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-015</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Fire Hydrants</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Direct from municipality or approved vendor ONLY.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">speed</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-016</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Utility Meters</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Electric/Water/Gas meters are restricted utility assets.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">history_edu</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-017</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Historic Markers</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Prohibited. Possession may trigger police involvement.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">construction</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-018</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Road Barriers</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Construction structural steel requires site manifest.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">biotech</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-019</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Lead Shields</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Radiation-free certificate required for medical items.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">apartment</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-020</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">I-Beams</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">Large structural steel requires demolition authorization.</p>
+</div>
+</div>
+<div class="aspect-square card-transition metallic-border p-8 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-5xl text-white group-hover:text-black transition-colors">electrical_services</span>
+<span class="font-syncopate text-[10px] font-bold text-accent-300 group-hover:text-black tracking-widest">REF: CAT-021</span>
+</div>
+<div>
+<h4 class="font-outfit font-black text-2xl uppercase mb-2 group-hover:text-black">Substation Gear</h4>
+<p class="font-bold text-sm text-neutral-400 group-hover:text-black/80">High-voltage bus bars and insulators are restricted.</p>
 </div>
 </div>
 </div>
 </main>
-<footer class="bg-industrial-black border-t-8 border-industrial-border py-16 px-6">
-<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-<div class="flex flex-col gap-6">
+<section class="max-w-[1600px] mx-auto px-8 pb-32">
+<div class="relative p-1 bg-gradient-to-r from-accent-light via-accent-base to-accent-dark">
+<div class="bg-industrial-black p-12 flex flex-col md:flex-row items-center justify-between gap-12">
+<div>
+<h2 class="font-chonburi text-5xl text-white uppercase mb-4">Verification Required?</h2>
+<p class="font-bold text-neutral-400 max-w-xl">Contact our compliance officers for pre-load assessment. We can verify material eligibility via high-res digital submissions to avoid gate delays.</p>
+</div>
+<button class="bg-accent-300 text-black px-12 py-5 font-outfit font-black uppercase tracking-widest hover:bg-white transition-colors whitespace-nowrap">
+                Speak to Compliance
+            </button>
+</div>
+</div>
+</section>
+<footer class="border-t border-white/10 py-12">
+<div class="max-w-[1600px] mx-auto px-8 flex justify-between items-center">
 <div class="flex items-center gap-4">
-<div class="size-12 text-primary">
-<svg class="h-full w-full" fill="currentColor" viewBox="0 0 48 48">
-<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
-</svg>
+<div class="w-10 h-10 gradient-bar flex items-center justify-center">
+<span class="material-symbols-outlined text-black font-black">shield</span>
 </div>
-<span class="text-white text-3xl font-black italic tracking-tighter">RENOVO<br/>SOLUTIONS</span>
+<p class="font-syncopate text-[10px] font-bold tracking-[0.2em]">METRO METALS SECURITY DIVISION</p>
 </div>
-<div class="font-mono text-gray-500 text-sm">
-                SYSTEM STATUS: <span class="text-primary">ONLINE</span><br/>
-                LOCATION: DETROIT_FACILITY_A1
-            </div>
+<div class="flex gap-12">
+<a class="font-syncopate text-[10px] font-bold tracking-[0.2em] hover:text-accent-300 transition-colors" href="#">LEGAL</a>
+<a class="font-syncopate text-[10px] font-bold tracking-[0.2em] hover:text-accent-300 transition-colors" href="#">PRIVACY</a>
+<a class="font-syncopate text-[10px] font-bold tracking-[0.2em] hover:text-accent-300 transition-colors" href="#">ACCESSIBILITY</a>
 </div>
-<div class="grid grid-cols-2 gap-16 font-bold">
-<div class="flex flex-col gap-4">
-<span class="text-primary text-sm font-black border-b border-primary mb-2">QUICK LINKS</span>
-<a class="hover:text-primary transition-colors" href="#">PRICING_TABLE</a>
-<a class="hover:text-primary transition-colors" href="#">GUIDELINES</a>
-<a class="hover:text-primary transition-colors" href="#">FACILITIES</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="text-primary text-sm font-black border-b border-primary mb-2">LEGAL</span>
-<a class="hover:text-primary transition-colors" href="#">PRIVACY_DATA</a>
-<a class="hover:text-primary transition-colors" href="#">USER_TERMS</a>
-<a class="hover:text-primary transition-colors" href="#">COMPLIANCE</a>
-</div>
-</div>
-</div>
-<div class="max-w-[1600px] mx-auto mt-16 pt-8 border-t border-industrial-border flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-600">
-<p>© 2024 RENOVO_RESOURCE_SOLUTIONS // ALL_RIGHTS_RESERVED</p>
-<p>RECYCLING FOR A SUSTAINABLE FUTURE [V4.2.0]</p>
 </div>
 </footer>
 

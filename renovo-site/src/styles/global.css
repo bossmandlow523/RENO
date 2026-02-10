@@ -227,48 +227,9 @@
 
   .industrial-bg {
     background-color: #111111;
-    background-image:
-      repeating-linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.07) 0px,
-        rgba(255, 255, 255, 0.07) 1px,
-        transparent 1px,
-        transparent 260px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.07) 0px,
-        rgba(255, 255, 255, 0.07) 1px,
-        transparent 1px,
-        transparent 260px
-      );
     position: relative;
   }
 
-  .industrial-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.05;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .industrial-bg::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      ellipse 70% 60% at 55% 45%,
-      rgba(60, 65, 70, 0.6) 0%,
-      rgba(30, 33, 36, 0.3) 40%,
-      rgba(17, 17, 17, 0) 70%
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
 
 
   /* ── Material Symbols Icons ───────────────────── */
@@ -301,6 +262,37 @@
     0% { background-position: 150% center; }
     50% { background-position: -50% center; }
     100% { background-position: 150% center; }
+  }
+
+  .amber-shimmer {
+    background: linear-gradient(
+      105deg,
+      #8B6914 0%,
+      #A67C1A 8%,
+      #C49A2A 16%,
+      #D4AA3C 24%,
+      #E8C15A 32%,
+      #F5D680 40%,
+      #E8C15A 48%,
+      #D4AA3C 56%,
+      #C49A2A 64%,
+      #A67C1A 72%,
+      #D4AA3C 80%,
+      #F5D680 88%,
+      #D4AA3C 94%,
+      #8B6914 100%
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: amberShimmer 40s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+
+  @keyframes amberShimmer {
+    0% { background-position: 100% center; }
+    50% { background-position: 0% center; }
+    100% { background-position: 100% center; }
   }
 
 

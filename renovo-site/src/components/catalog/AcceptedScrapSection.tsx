@@ -1,13 +1,33 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MaterialCard from "./MaterialCard";
 import { materials, categories, type Category } from "./materials-data";
 
 export default function AcceptedScrapSection() {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
+  const navigate = useNavigate();
 
   return (
-    <section id="materials" className="relative industrial-bg overflow-hidden">
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-10 py-16 md:py-24">
+    <section
+      id="materials"
+      className="relative z-[2] overflow-hidden"
+      style={{
+        backgroundImage: "url('/darkshell.jpeg')",
+        backgroundSize: "100% auto",
+        backgroundPosition: "bottom center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div
+        className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-10 py-16 md:py-24"
+        style={{
+          background: "rgba(10, 10, 10, 0.55)",
+          backdropFilter: "blur(20px) saturate(1.3)",
+          WebkitBackdropFilter: "blur(20px) saturate(1.3)",
+          borderLeft: "1px solid rgba(255, 255, 255, 0.06)",
+          borderRight: "1px solid rgba(255, 255, 255, 0.06)",
+        }}
+      >
         <div className="flex flex-col gap-2 mb-12 pl-6 relative">
           <div
             className="absolute left-0 top-0 bottom-0 w-2 rounded-full"
@@ -16,7 +36,7 @@ export default function AcceptedScrapSection() {
               boxShadow: "0 0 12px rgba(255, 127, 0, 0.4), 0 0 30px rgba(255, 127, 0, 0.15)",
             }}
           />
-          <h2 className="text-white text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none uppercase" style={{ fontFamily: "'Chonburi', cursive" }}>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-normal tracking-tighter leading-none uppercase text-white" style={{ fontFamily: "'Chonburi', cursive" }}>
             Accepted Scrap
           </h2>
         </div>
@@ -29,7 +49,10 @@ export default function AcceptedScrapSection() {
             </p>
             <span className="text-surface-900 text-lg">⚠</span>
           </div>
-          <button className="ml-auto px-6 py-2 font-display font-black text-sm skew-x-[-12deg] bg-red-700 border-2 border-red-500 text-white hover:bg-red-600 transition-colors whitespace-nowrap">
+          <button
+            onClick={() => navigate("/restricted-materials")}
+            className="ml-auto px-6 py-2 font-display font-black text-sm skew-x-[-12deg] bg-red-700 border-2 border-red-500 text-white hover:bg-red-600 transition-colors whitespace-nowrap"
+          >
             <span className="inline-block skew-x-[12deg]">RESTRICTED_MATERIALS <span className="inline-block text-lg leading-none align-middle">▸▸</span></span>
           </button>
         </div>

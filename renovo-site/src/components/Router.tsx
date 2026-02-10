@@ -3,6 +3,7 @@ import { ScrollToTop } from '@/lib/scroll-to-top';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HomePage from '@/components/pages/HomePage';
+import RestrictedMaterialsPage from '@/components/pages/RestrictedMaterialsPage';
 
 // Layout component that includes Header, Footer, and ScrollToTop
 function Layout() {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "restricted-materials",
+        element: <RestrictedMaterialsPage />,
       },
       {
         path: "*",
