@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>High-Contrast Industrial Catalog - Renovo Resource Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fbbf24","industrial-black": "#0f0f0f",
+                        "industrial-gray": "#1a1a1a",
+                        "industrial-border": "#333333",
+                        "accent": "#f97316",},
+                    fontFamily: {
+                        "display": ["Barlow Condensed", "sans-serif"],
+                        "mono": ["Roboto Mono", "monospace"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-industrial-black text-gray-100 font-display;
+                background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0);
+                background-size: 32px 32px;
+            }
+        }
+        .industrial-texture {
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
+                              linear-gradient(225deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
+                              linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%), 
+                              linear-gradient(315deg, rgba(255,255,255,0.05) 25%, transparent 25%);
+            background-position: 10px 0, 10px 0, 0 0, 0 0;
+            background-size: 20px 20px;
+            background-repeat: repeat;
+        }
+        .metallic-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+                        linear-gradient(135deg, #444, #888, #444) border-box;
+        }
+        .desaturated-img {
+            filter: grayscale(0.4) contrast(1.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col uppercase tracking-wider">
+<div class="w-full bg-accent py-2 px-4 border-b-2 border-industrial-black shadow-lg z-[60]">
+<div class="flex items-center justify-center gap-3 text-industrial-black text-sm font-extrabold italic">
+<span class="material-symbols-outlined font-bold">warning</span>
+<span>TIP: SEPARATE MATERIALS BY TYPE TO MAXIMIZE PROFITS. CLEAN METALS EARN MORE!</span>
+<span class="material-symbols-outlined font-bold">warning</span>
+</div>
+</div>
+<header class="flex items-center justify-between border-b-4 border-industrial-border bg-industrial-black px-6 md:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-10 text-primary">
+<svg class="h-full w-full" fill="currentColor" viewBox="0 0 48 48">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-black italic tracking-tighter leading-none">RENOVO RESOURCE<br/><span class="text-primary">SOLUTIONS</span></h2>
+</div>
+<div class="hidden xl:flex items-center gap-6 font-semibold">
+<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">HOME</a>
+<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">PRICING</a>
+<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">LOCATIONS</a>
+<a class="text-gray-400 hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary" href="#">CONTACT</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<label class="hidden md:flex flex-col min-w-40 !h-11 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-sm h-full ring-2 ring-industrial-border overflow-hidden bg-industrial-gray">
+<div class="text-primary flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent text-white focus:ring-0 placeholder:text-gray-600 px-4 text-base font-bold uppercase" placeholder="SEARCH CATALOG" value=""/>
+</div>
+</label>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-sm h-11 px-6 bg-primary hover:bg-white transition-all text-industrial-black text-lg font-black italic">
+<span class="truncate">GET QUOTE</span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[1600px] mx-auto px-6 py-12">
+<div class="flex flex-col gap-2 mb-12 border-l-8 border-primary pl-6">
+<h1 class="text-white text-6xl md:text-8xl font-black tracking-tighter leading-none uppercase">Accepted Scrap</h1>
+<p class="text-primary font-mono text-lg font-bold max-w-2xl">
+            [ INDUSTRIAL GRADE CATALOG // IDENTIFY MATERIALS BELOW ]
+        </p>
+</div>
+<div class="mb-12 overflow-x-auto pb-4 scrollbar-hide">
+<div class="flex gap-2 min-w-max">
+<button class="px-8 py-3 bg-primary text-industrial-black font-black text-lg skew-x-[-12deg] transition-all hover:scale-105">
+<span class="inline-block skew-x-[12deg]">ALL_MATERIALS</span>
+</button>
+<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
+<span class="inline-block skew-x-[12deg]">ALUMINUM</span>
+</button>
+<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
+<span class="inline-block skew-x-[12deg]">COPPER</span>
+</button>
+<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
+<span class="inline-block skew-x-[12deg]">RADIATORS</span>
+</button>
+<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
+<span class="inline-block skew-x-[12deg]">STAINLESS_STEEL</span>
+</button>
+<button class="px-8 py-3 bg-industrial-gray border-2 border-industrial-border text-gray-400 font-bold text-lg skew-x-[-12deg] hover:border-primary hover:text-white transition-all">
+<span class="inline-block skew-x-[12deg]">OTHER</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Bare bright copper" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZsUeh-vSixRcV3bmKULGkr_pNoIx7cYvcA8Vkl01PRqtSrlaJiGBBMkQTQmE4UeNKpfeL3NzV2_HpmpMMyh8VAQXzAR-LDuIyCVN_B9TUNF3eL4pF_UB4OuCgq1Z2yfq_T-ZXi7ov2LNF9kiBSaGc7MVB3jj4EIPcy2Z5xxLQz9kMWW7unOkkl3jLM7L_ABbUlYy6fkVq_oDWAaN6OhfbELfi31ESdXhpolPcwY6xNkOZcmqP8s2rlC2RSgsWhQ8zYajyoGZqdI"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">BARE BRIGHT COPPER</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">BARE BRIGHT COPPER</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">MOST VALUABLE GRADE. CLEAN, UNCOATED WIRE ONLY.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: CP-01</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Copper tubing" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEgLmQdhq9bbn8Gn-bBVv9rL1q3SP4PhUf_wvyu3ZfBC4_Y1EoA1VGcUWq9hKb1BLX1lQz-Qm5lo4as0V4pdInwC-OILCXJjQu8pkvs9HGKO_GCxtmHtcNSS53KWYga43AF2ZHcnjJNSO4P3UqrpbySsMMy6_Bc_09b1eXX1Nqum1OTx3gDFg55-2zXATWG2B62fZhCBFspVqGwd9T5RI4PC4ZyutuFkeQuvYNWhgmFB2mFMtTgVl3Tr9864J-Vn1Q9Iui1CINRJs"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">#1 COPPER TUBING</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">#1 COPPER TUBING</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">CLEAN TUBING. NO PAINT, SOLDER, OR CORROSION.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: CP-02</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Extruded aluminum" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8WKevwNeNsVsvA1tfYW68zhmLcdubYcECwefnFtkhaw84UCCJwV8MegQ8hUaFB_Cx1SqKFshQ_s_dHtjRUkAI1-6C0OzDzqF5alEMHYrA0eDEJ56VhSEXmV8jFwf7i4e6hekesa2PAM6zrpuoJwAY9FWKonz_QTu32yxRjiwJ0W-5UdnWR9AYxtPEa_twgj6vPHHeEFn0YYVwuxVgFgOIr56Gme-ZNETi0bEhC7f85RP0hPbSKCKGbN14PMMjcfsbygj16k5sQiA"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">EXTRUDED ALUMINUM</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">EXTRUDED ALUMINUM</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">UNPAINTED WINDOW FRAMES AND STRUCTURAL PROFILES.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: AL-44</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Yellow brass" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1NRBvdV_j0HHqUTLK0iQCCfMjxFB6PaIhRenIwFiDbCrjodG0532cBuMfK47yy2OxanY5-PJCJ8a2plSBmI-GpEtfNX_C1SNglxRbmqjew491Ico4-5NjclyoQpDTJG5T2oA9Q9ttuI880EkSNEXKsvm1GuXBBK5jvR1cOfAwQSUosG0J6e8BtzsgfDwl1bAXT4DA_i_4Lln4J1BfGPnKdeo8DvBD_48fMwqjz0YIP86ET_zFCQyqOBsrXrejXJqeQ6Y9gay3-80"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">YELLOW BRASS</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">YELLOW BRASS</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">FAUCETS, PLUMBING FIXTURES, AND INDUSTRIAL FITTINGS.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: BR-12</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="304 Stainless" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD__Ce9bQsXYlWcs7oesVhzlDl7J-YvYcsxb6QkipgLVQgmvh05SHuEYQujyjvj4nLVa9WMfYVLg7raDZbfbg9p8NZrRKDjvLlKc-81p67ZWUJNcDmLoCG7SkTj-mcDeCDzHA0ymM3hiO524MzQ-X8eGHlqrGYb4JQo9URVk3zzLY5hvzkJSKYaIHLV9P_0oByji-hx9qxxL0xJQOyrWlLDw_PE91Mz32Y26G3Dm-hmL9HWhFy2OiRPFiLzT41DA1mGFOpG6Si08Ns"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">304 STAINLESS STEEL</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">304 STAINLESS STEEL</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">NON-MAGNETIC STEEL. SINKS AND KITCHEN EQUIPMENT.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: SS-09</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Auto Radiators" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOOohiF45Ozv51EKk1J3VnMqm5ADMTDuahZ5AndF_aHCWod7gZ6CZipSWDva6S8FP_LwLtyjPBFW4PEAquvSy1rqO-v0sfQt0CIX6V-A6oJi0LLeQ68i9v0QC4e0xyIQNb0FkJn7MgRSIh_wPV5AnaS2T18EX6pM5NJ4cUnjpzM64kurNL8D8AMuqF_A5CD2APQyMDO26TbJbABV_96mfabnmI1uyH0YzfiC2hNtsd_xqb7NRClucTB9mu7YCEBH4-fhuagJcEdYw"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">AUTO RADIATORS</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">AUTO RADIATORS</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">CLEAN COPPER/BRASS AUTOMOTIVE RADIATOR UNITS.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: RD-55</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Insulated Wire" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOVVLfkLor_lQDhI2HfPcRol0TJSEZ6Zj1r0elCRxpBaxy2qDdGYV_aQrqwyKcBFUI2uiKQBkHRIW-ZQzS1IX9SyxDyQ-48fmP0F-p21o_aEYPZGRvaErBHtwiqealLlQHQ4wIVWas9eQBPgt7uJ5VPjbM-JEHcJuhzOhOQHuQeEqeENGdXvhdW2U0azs4OA2Is7lZuFo3MTBAMtDR8Xag8Jgglai3JW0ZvXe811CbdTescUPLGJro6TF7hF8oOp0bxTpMhTTeux0"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">INSULATED WIRE #1</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">INSULATED WIRE #1</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">HIGH RECOVERY COPPER WIRE. THHN OR ROMEX.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: WR-01</div>
+</div>
+</div>
+<div class="group relative overflow-hidden metallic-border bg-industrial-gray aspect-square cursor-pointer">
+<img alt="Electric Motors" class="h-full w-full object-cover desaturated-img transition-all duration-500 group-hover:scale-110 group-hover:blur-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC72blJHkkTCQozcMxmR6KD1cFHS5IR7vqjH2cu_DxtSV8_AEXiOMW-0yDWQXJZ1RU3ojHQJzjIZfrT6L1xaf7ufaED6-HWAF1WBeOnUu7EfPEzSfrTaIdNfFPngan7Pug0MyJZGquFv0If_lRPx1yRPl5EPekIpKEgW8O5aibkNL4Zdy2q5CoeY0BVftENfWSgux-ip8xGeY7-RegzXkWaKeSJ1xiTpcNIfsyzcbUmH87N8WxJ6rfhqYlvrdPCJxCsjZxTzOAlm4"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent p-6 group-hover:hidden">
+<h3 class="text-2xl font-black text-white">ELECTRIC MOTORS</h3>
+</div>
+<div class="absolute inset-0 bg-primary/95 flex flex-col items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="industrial-texture absolute inset-0 opacity-20"></div>
+<h3 class="text-4xl font-black text-industrial-black text-center mb-4 leading-tight">ELECTRIC MOTORS</h3>
+<div class="w-16 h-1.5 bg-industrial-black mb-4"></div>
+<p class="text-industrial-black text-xl font-bold text-center leading-tight">WINDINGS FROM APPLIANCES OR HEAVY MACHINERY.</p>
+<div class="mt-8 border-4 border-industrial-black px-4 py-1 text-industrial-black font-black text-sm">CAT_REF: MT-10</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-industrial-black border-t-8 border-industrial-border py-16 px-6">
+<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="size-12 text-primary">
+<svg class="h-full w-full" fill="currentColor" viewBox="0 0 48 48">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
+</svg>
+</div>
+<span class="text-white text-3xl font-black italic tracking-tighter">RENOVO<br/>SOLUTIONS</span>
+</div>
+<div class="font-mono text-gray-500 text-sm">
+                SYSTEM STATUS: <span class="text-primary">ONLINE</span><br/>
+                LOCATION: DETROIT_FACILITY_A1
+            </div>
+</div>
+<div class="grid grid-cols-2 gap-16 font-bold">
+<div class="flex flex-col gap-4">
+<span class="text-primary text-sm font-black border-b border-primary mb-2">QUICK LINKS</span>
+<a class="hover:text-primary transition-colors" href="#">PRICING_TABLE</a>
+<a class="hover:text-primary transition-colors" href="#">GUIDELINES</a>
+<a class="hover:text-primary transition-colors" href="#">FACILITIES</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-primary text-sm font-black border-b border-primary mb-2">LEGAL</span>
+<a class="hover:text-primary transition-colors" href="#">PRIVACY_DATA</a>
+<a class="hover:text-primary transition-colors" href="#">USER_TERMS</a>
+<a class="hover:text-primary transition-colors" href="#">COMPLIANCE</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1600px] mx-auto mt-16 pt-8 border-t border-industrial-border flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-600">
+<p>© 2024 RENOVO_RESOURCE_SOLUTIONS // ALL_RIGHTS_RESERVED</p>
+<p>RECYCLING FOR A SUSTAINABLE FUTURE [V4.2.0]</p>
+</div>
+</footer>
+
+</body></html>
