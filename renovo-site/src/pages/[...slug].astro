@@ -3,14 +3,18 @@ import { SEO } from '@wix/seo/components';
 import { loadSEOTagsServiceConfig } from '@wix/seo/services';
 import { Head } from "@/components/Head";
 import AppRouter from "@/components/Router";
+import { seoMetadata } from "@/lib/seo-metadata";
 import "@wix/wix-vibe-plugins/plugins-vars.css";
 import "@wix/wix-vibe-plugins/plugins-theme.css";
 import "@/styles/global.css";
 
+const slug = (Astro.params.slug || '') as string;
+const meta = seoMetadata[slug] || seoMetadata[''];
+
 const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
   pageUrl: Astro.url.href,
   itemData: {
-    pageName: 'Home',
+    pageName: meta.title,
   },
 });
 ---
@@ -18,6 +22,18 @@ const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
 <html lang="en" class="w-full h-full">
   <head>
     <Head />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <meta name="keywords" content={meta.keywords} />
+    <link rel="canonical" href={Astro.url.href} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content="Renovo Resource Solutions" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
     <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />
   </head>
   <body class="w-full h-full">

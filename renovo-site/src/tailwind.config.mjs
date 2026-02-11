@@ -23,7 +23,7 @@ export default {
 
             /* ── Font Families ────────────────────────────── */
             fontFamily: {
-                display:   ['"Outfit"', 'sans-serif'],          // Hero headlines, page titles
+                display:   ['"Chonburi"', 'cursive'],            // Hero headlines, page titles
                 heading:   ['"Montserrat"', 'system-ui', 'sans-serif'], // Section headings
                 accent:    ['"Syncopate"', 'sans-serif'],       // Labels, badges, logo
                 body:      ['"Inter"', 'system-ui', 'sans-serif'],      // Body copy
