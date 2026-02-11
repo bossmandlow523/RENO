@@ -24,20 +24,17 @@ export default function ScrapLawsPage() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 pt-28 lg:pt-32 pb-16">
         <header className="flex flex-col md:flex-row justify-between md:items-end border-b border-white/10 pb-8 gap-6">
           <div>
-            <div className="inline-block border-y border-accent-300/30 py-1.5 mb-5">
-              <p className="text-accent-400 font-bold font-body tracking-[0.4em] text-[10px] uppercase">
-                Florida Statutes &amp; Local Ordinances
-              </p>
-            </div>
             <h1 className="text-6xl md:text-7xl lg:text-8xl leading-[0.85] uppercase tracking-tighter metal-angular font-display">
               Legal<br />Compliance
             </h1>
           </div>
           <div className="text-left md:text-right pb-2">
-            <p className="font-display text-white text-lg font-black uppercase tracking-wider">
-              F.S. Chapter 538
-            </p>
-            <p className="text-surface-400 text-sm max-w-sm mt-1">
+            <div className="inline-block border-y border-accent-300/30 py-1.5 mb-3">
+              <p className="text-accent-400 font-bold font-body tracking-[0.4em] text-[10px] uppercase">
+                F.S. Chapter 538
+              </p>
+            </div>
+            <p className="text-surface-400 text-sm max-w-sm md:ml-auto mt-1">
               Governing scrap metal transactions at Renovo Resource Solutions.
             </p>
           </div>

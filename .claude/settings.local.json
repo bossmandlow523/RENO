@@ -5,7 +5,14 @@
       "mcp__obsidian__patch_note",
       "mcp__obsidian__read_note",
       "mcp__obsidian__list_directory",
-      "mcp__obsidian__search_notes"
+      "mcp__obsidian__search_notes",
+      "Bash(copy:*)",
+      "mcp__context7__resolve-library-id",
+      "Bash(findstr:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }

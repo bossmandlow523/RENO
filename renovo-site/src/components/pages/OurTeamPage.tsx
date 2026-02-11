@@ -129,7 +129,7 @@ export default function OurTeamPage() {
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl uppercase metal-shimmer leading-none">
           Kingfish Holdings
         </h1>
-        <p className="font-heading font-medium text-sm md:text-base tracking-[0.35em] uppercase text-accent-300 mt-3">
+        <p className="font-heading font-medium text-sm md:text-base tracking-[0.35em] uppercase text-accent-400 mt-3">
           A Delaware Company
         </p>
         <div className="w-16 h-px bg-surface-600 mt-10" />

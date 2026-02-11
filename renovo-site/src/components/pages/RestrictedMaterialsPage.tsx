@@ -50,26 +50,24 @@ export default function RestrictedMaterialsPage() {
     : materials.filter((m) => m.category === activeCategory);
 
   return (
-    <div className="bg-surface-950 min-h-screen">
+    <div className="payment-page-bg min-h-screen">
       {/* Gradient bar */}
       <div className="h-1.5 w-full bg-gradient-to-r from-accent-200 via-accent-400 to-accent-500" />
 
       {/* Page header */}
-      <header className="max-w-[1400px] mx-auto px-6 md:px-10 pt-28 pb-5 flex flex-col md:flex-row justify-between md:items-end border-b border-white/10 gap-4">
+      <header className="max-w-[1400px] mx-auto px-6 md:px-10 pt-32 pb-8 border-b border-white/10">
+        <p className="font-accent font-bold text-[10px] tracking-[0.2em] text-accent-400 mb-4">
+          SCRAP RECYCLING OPERATIONS
+        </p>
         <h1
-          className="text-7xl md:text-8xl lg:text-9xl leading-none uppercase tracking-tighter metal-shimmer"
+          className="text-6xl md:text-7xl lg:text-8xl leading-[0.9] uppercase tracking-tighter metal-shimmer mb-5"
           style={{ fontFamily: "'Chonburi', cursive" }}
         >
           RESTRICTED<br />MATERIALS
         </h1>
-        <div className="text-left md:text-right pb-1">
-          <p className="font-accent font-bold text-[10px] tracking-[0.15em] text-accent-300 mb-1">
-            SCRAP RECYCLING OPERATIONS
-          </p>
-          <p className="font-display text-white text-lg font-black">
-            STATUTE 538.26 COMPLIANCE
-          </p>
-        </div>
+        <p className="font-accent font-bold text-[11px] tracking-[0.15em] text-accent-400">
+          FLORIDA STATUTE 538.26 COMPLIANCE
+        </p>
       </header>
 
       {/* Documentation Protocol */}
@@ -142,25 +140,25 @@ export default function RestrictedMaterialsPage() {
           {filtered.map((material) => (
             <div
               key={material.ref}
-              className="aspect-square metallic-border p-6 flex flex-col justify-between group hover:bg-accent-300 hover:opacity-[0.95] hover:scale-[1.02] cursor-pointer transition-all duration-400"
+              className="aspect-square restricted-card p-6 flex flex-col justify-between group hover:scale-[1.02] cursor-pointer transition-all duration-300"
               style={{ transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)" }}
             >
               <div className="flex justify-between items-start">
                 <span
-                  className="material-symbols-outlined text-4xl text-white group-hover:text-black transition-colors"
+                  className="material-symbols-outlined text-4xl text-surface-400 group-hover:text-accent-300 transition-colors duration-300"
                   style={{ fontVariationSettings: "'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48" }}
                 >
                   {material.icon}
                 </span>
-                <span className="font-accent text-[9px] font-bold text-accent-300 group-hover:text-black tracking-widest">
+                <span className="font-accent text-[9px] font-bold text-accent-300/60 group-hover:text-accent-300 tracking-widest transition-colors duration-300">
                   REF: {material.ref}
                 </span>
               </div>
               <div>
-                <h4 className="font-display font-black text-xl uppercase mb-1.5 text-white group-hover:text-black">
+                <h4 className="font-display font-black text-xl uppercase mb-1.5 text-white group-hover:text-accent-200 transition-colors duration-300">
                   {material.name}
                 </h4>
-                <p className="font-bold text-xs text-surface-400 group-hover:text-black/80">
+                <p className="font-bold text-xs text-surface-400 group-hover:text-surface-200 transition-colors duration-300">
                   {material.description}
                 </p>
               </div>

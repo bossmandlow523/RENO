@@ -350,8 +350,9 @@
     backface-visibility: hidden;
   }
   .restricted-card:hover {
-    background: linear-gradient(#1c1c1c, #1c1c1c) padding-box,
-                linear-gradient(135deg, #FFB74D, #FFB74D, #FFB74D) border-box;
+    background: linear-gradient(#1c1c1c, #222) padding-box,
+                linear-gradient(135deg, #FFB74D, #FF9933, #FFB74D) border-box;
+    box-shadow: 0 0 24px rgba(255, 153, 51, 0.12), 0 0 60px rgba(255, 153, 51, 0.06);
   }
 
   .desaturated-img {
