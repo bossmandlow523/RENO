@@ -7,7 +7,7 @@ export interface Material {
 }
 
 export const categories: { label: string; value: Category }[] = [
-  { label: "ALL_MATERIALS", value: "all" },
+  { label: "ALL MATERIALS", value: "all" },
   { label: "ALUMINUM", value: "aluminum" },
   { label: "COPPER", value: "copper" },
   { label: "RADIATORS", value: "radiators" },

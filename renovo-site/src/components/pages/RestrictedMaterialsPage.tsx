@@ -50,7 +50,7 @@ export default function RestrictedMaterialsPage() {
     : materials.filter((m) => m.category === activeCategory);
 
   return (
-    <div className="payment-page-bg min-h-screen">
+    <div className="catalog-bg min-h-screen">
       {/* Gradient bar */}
       <div className="h-1.5 w-full bg-gradient-to-r from-accent-200 via-accent-400 to-accent-500" />
 

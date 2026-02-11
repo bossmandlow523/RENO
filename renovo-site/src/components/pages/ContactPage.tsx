@@ -28,6 +28,7 @@ export default function ContactPage() {
 
   return (
     <div className="payment-page-bg text-white min-h-screen">
+      <div className="h-1.5 w-full bg-gradient-to-r from-accent-200 via-accent-400 to-accent-500" />
       {/* ── Page Title ── */}
       <div className="max-w-[1200px] mx-auto px-6 pt-28 lg:pt-32 pb-10 lg:pb-14 text-center">
         <div className="inline-block border-y border-accent-300/30 py-1.5 mb-4">

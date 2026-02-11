@@ -96,10 +96,8 @@ function TeamCard({ member }: { member: TeamMember }) {
 
 function SectionHeader({
   title,
-  count,
 }: {
   title: string;
-  count: number;
 }) {
   return (
     <div className="flex items-baseline justify-between mb-20">
@@ -109,11 +107,6 @@ function SectionHeader({
         {title}
       </h2>
       <div className="hidden md:block flex-1 mx-12 h-px bg-white/10" />
-      <div className="-skew-x-12 bg-white/5 px-6 py-2">
-        <div className="skew-x-12 font-body text-[10px] tracking-widest text-white">
-          {String(count).padStart(2, "0")} UNITS
-        </div>
-      </div>
     </div>
   );
 }
@@ -121,6 +114,7 @@ function SectionHeader({
 export default function OurTeamPage() {
   return (
     <div className="bg-[#121212] text-white min-h-screen">
+      <div className="h-1.5 w-full bg-gradient-to-r from-accent-200 via-accent-400 to-accent-500" />
       {/* Brand Header */}
       <section className="pt-32 lg:pt-40 pb-24 flex flex-col items-center justify-center text-center px-6">
         <p className="font-body font-bold tracking-[0.4em] text-accent-400 uppercase text-[10px] mb-6">
@@ -136,8 +130,8 @@ export default function OurTeamPage() {
       </section>
 
       {/* Executive Committee */}
-      <section className="max-w-[1470px] mx-auto px-6 md:px-10 py-24 border-t border-white/5" style={{ backgroundImage: "linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)", backgroundSize: "40px 100%" }}>
-        <SectionHeader title="Executive Committee" count={executives.length} />
+      <section className="max-w-[1470px] mx-auto px-6 md:px-10 py-24 border-t border-accent-400/30" style={{ backgroundImage: "linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)", backgroundSize: "40px 100%" }}>
+        <SectionHeader title="Executive Committee" />
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {executives.map((member) => (
             <TeamCard key={member.name} member={member} />
@@ -147,7 +141,7 @@ export default function OurTeamPage() {
 
       {/* Board of Directors */}
       <section className="max-w-[1470px] mx-auto px-6 md:px-10 py-24" style={{ backgroundImage: "linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px)", backgroundSize: "100% 40px" }}>
-        <SectionHeader title="Board of Directors" count={boardMembers.length} />
+        <SectionHeader title="Board Members" />
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {boardMembers.map((member) => (
             <TeamCard key={member.name} member={member} />

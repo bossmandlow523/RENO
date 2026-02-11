@@ -34,11 +34,8 @@ export default function AcceptedScrapSection() {
       className="relative overflow-hidden"
     >
       <div
-        className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-10 pt-32 md:pt-40 pb-16 md:pb-24"
+        className="catalog-bg relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-10 pt-32 md:pt-40 pb-16 md:pb-24"
         style={{
-          background: "rgba(10, 10, 10, 0.55)",
-          backdropFilter: "blur(20px) saturate(1.3)",
-          WebkitBackdropFilter: "blur(20px) saturate(1.3)",
           borderLeft: "1px solid rgba(255, 255, 255, 0.06)",
           borderRight: "1px solid rgba(255, 255, 255, 0.06)",
         }}
@@ -68,7 +65,7 @@ export default function AcceptedScrapSection() {
             onClick={() => navigate("/restricted-materials")}
             className="ml-auto px-6 py-2 font-display font-black text-sm skew-x-[-12deg] bg-red-700 border-2 border-red-500 text-white hover:bg-red-600 transition-colors whitespace-nowrap"
           >
-            <span className="inline-block skew-x-[12deg]">RESTRICTED_MATERIALS <span className="inline-block text-lg leading-none align-middle">▸▸</span></span>
+            <span className="inline-block skew-x-[12deg]">RESTRICTED MATERIALS <span className="inline-block text-lg leading-none align-middle">▸▸</span></span>
           </button>
         </div>
 
